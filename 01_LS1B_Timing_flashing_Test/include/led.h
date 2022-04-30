@@ -10,7 +10,7 @@
 
 #include "ls1b_gpio.h"
 
-#define LED_1 2
+#define LED_1 14
 
 
 

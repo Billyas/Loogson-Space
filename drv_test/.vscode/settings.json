@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "rtthread.h": "c",
+        "ls1b.h": "c",
+        "ls1b_gpio.h": "c"
+    }
+}

@@ -29,7 +29,7 @@ BSPFlags=
 
 [CCompiler]
 GxxFileName=D:\LoongIDE\mips-2011.03\bin\mips-sde-elf-gcc.exe
-GxxFlags=-mips32 -G0 -EL -msoft-float -DLS1B -DOS_RTTHREAD  -O0 -g -Wall -c -fmessage-length=0 -pipe 
+GxxFlags=-mips32 -G0 -EL -msoft-float -DLS1B -DOS_RTTHREAD  -O0 -g -Wall -c -fmessage-length=0 -pipe
 PrepFlags=
 NoStdInc=0
 IncludePaths=./RTT4/include;./RTT4/port/include;./RTT4/port/mips;./RTT4/components/finsh;./RTT4/components/dfs/include;./RTT4/components/drivers/include;./RTT4/components/libc/time;./RTT4/bsp-ls1x;./ls1x-drv/include;./yaffs2/direct;./yaffs2/port
@@ -59,7 +59,7 @@ SearchPaths=
 
 [CppCompiler]
 GxxFileName=D:\LoongIDE\mips-2011.03\bin\mips-sde-elf-g++.exe
-GxxFlags=-mips32 -G0 -EL -msoft-float -DLS1B -DOS_RTTHREAD  -O0 -g -Wall -c -fmessage-length=0 -pipe 
+GxxFlags=-mips32 -G0 -EL -msoft-float -DLS1B -DOS_RTTHREAD  -O0 -g -Wall -c -fmessage-length=0 -pipe
 PrepFlags=
 NoStdInc=0
 IncludePaths=./RTT4/include;./RTT4/port/include;./RTT4/port/mips;./RTT4/components/finsh;./RTT4/components/dfs/include;./RTT4/components/drivers/include;./RTT4/components/libc/time;./RTT4/bsp-ls1x;./ls1x-drv/include;./yaffs2/direct;./yaffs2/port
@@ -89,7 +89,7 @@ SearchPaths=
 
 [Assembler]
 GxxFileName=D:\LoongIDE\mips-2011.03\bin\mips-sde-elf-gcc.exe
-GxxFlags=-mips32 -G0 -EL -msoft-float -DLS1B -DOS_RTTHREAD  -O0 -g -Wall -c -fmessage-length=0 -pipe 
+GxxFlags=-mips32 -G0 -EL -msoft-float -DLS1B -DOS_RTTHREAD  -O0 -g -Wall -c -fmessage-length=0 -pipe
 PrepFlags=
 NoStdInc=0
 IncludePaths=./RTT4/include;./RTT4/port/include;./RTT4/port/mips;./RTT4/components/finsh;./RTT4/components/dfs/include;./RTT4/components/drivers/include;./RTT4/components/libc/time;./RTT4/bsp-ls1x;./ls1x-drv/include;./yaffs2/direct;./yaffs2/port
@@ -119,7 +119,7 @@ SearchPaths=
 
 [Linker]
 GxxFileName=D:\LoongIDE\mips-2011.03\bin\mips-sde-elf-gcc.exe
-GxxFlags=-mips32 -G0 -EL -msoft-float -nostartfiles 
+GxxFlags=-mips32 -G0 -EL -msoft-float -nostartfiles
 NoStartFiles=1
 NoDefaultLibs=0
 NoStdlib=0
@@ -216,3 +216,6 @@ Folders53=src
 Folders54=yaffs2
 Folders55=yaffs2/direct
 Folders56=yaffs2/port
+
+[Debugger]
+Count=0
