@@ -1,6 +1,6 @@
 [Editors]
 OpenCount=18
-Focused=415
+Focused=394
 
 [Editor_47]
 OpenOrder=8
@@ -140,8 +140,8 @@ UnitIndex=413
 
 [Editor_416]
 OpenOrder=17
-CursorRow=285
-CursorCol=20
-TopLine=274
+CursorRow=277
+CursorCol=1
+TopLine=1
 LeftChar=1
 UnitIndex=415

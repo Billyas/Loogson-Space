@@ -26,7 +26,7 @@ struct rt_device led1_device;
 static rt_err_t rt_led_init (rt_device_t dev)
 {
     struct led_device* led_dev = (struct led_device*) dev->user_data;
-    // åˆå§‹åŒ–
+    // ³õÊ¼»¯
     rt_kprintf("Init gpio! gpio_num = %d \n", led_dev->led_num);
     gpio_enable(led_dev->led_num, DIR_OUT);	
     return RT_EOK;
@@ -90,13 +90,13 @@ rt_err_t rt_hw_led_register(rt_device_t device, const char* name, rt_uint32_t fl
 
 
 /*
- * æµ‹è¯•åº“ä¸­gpioä½œä¸ºè¾“å‡ºæ—¶çš„ç›¸å…³æ¥å£
- * ledé—ªçƒ10æ¬¡
+ * ²âÊÔ¿âÖĞgpio×÷ÎªÊä³öÊ±µÄÏà¹Ø½Ó¿Ú
+ * ledÉÁË¸10´Î
  */
 void test_driver(void)
 {
     int i;
-    static rt_device_t led_device;//ledè®¾å¤‡
+    static rt_device_t led_device;//ledÉè±¸
     
   rt_hw_led_register(&led1_device, "led1",  RT_DEVICE_FLAG_RDWR , &led1);
     
@@ -120,5 +120,5 @@ void test_driver(void)
 
 #include  <finsh.h> 
 FINSH_FUNCTION_EXPORT(test_driver, test_driver  e.g.test_driver());
-/* å¯¼å‡ºåˆ° msh å‘½ä»¤åˆ—è¡¨ä¸­ */
+/* µ¼³öµ½ msh ÃüÁîÁĞ±íÖĞ */
 MSH_CMD_EXPORT(test_driver, test_driver);
