@@ -145,3 +145,34 @@ void tcpserver_set_notify_callback(struct tcpserver *server,
 
 
 
+
+
+### 测试函数
+
+```c
+static void tcpservertest()
+{
+    rt_int32_t timeout = 100000;
+    struct tcpserver* server = tcpserver_create("192.168.5.64", 80);
+    struct tcpclient * client = tcpserver_accept(server, timeout);
+    if(client){
+        rt_kprintf("get client");
+      tcpserver_send(client, http_html_hdr, sizeof(http_html_hdr), timeout);
+      tcpserver_send(client, http_index_html, sizeof(http_index_html), timeout);
+      tcpserver_close(client);
+    }
+    rt_kprintf("no client");
+    tcpserver_destroy(server);
+}
+
+```
+
+
+
+
+
+
+
+
+
+![image-20220505132033197](https://cdn.jsdelivr.net/gh/Billyas/myimg/img/image-20220505132033197.png)
