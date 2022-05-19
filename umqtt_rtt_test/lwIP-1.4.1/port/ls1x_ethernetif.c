@@ -509,9 +509,9 @@ void ls1x_initialize_lwip(unsigned char *ip0, unsigned char *ip1)
     }
     else
     {
-        IP4_ADDR(&ipaddr,  192, 168,   1, 123);     /* default IP address */
+        IP4_ADDR(&ipaddr,  192, 168,   5, 64);     /* default IP address */
         IP4_ADDR(&netmask, 255, 255, 255,   0);
-        IP4_ADDR(&gateway, 192, 168,   1,   1);
+        IP4_ADDR(&gateway, 192, 168,   5,   1);
     }
     
     ls1x_gmac0_ethernetif.dev_gmac = devGMAC0;      /* user data */

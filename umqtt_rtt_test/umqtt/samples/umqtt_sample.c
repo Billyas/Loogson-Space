@@ -26,7 +26,7 @@
 
 // #define MQTT_URI                "tcp://test.mosquitto.org:1883"
 // #define MQTT_URI                "tcp://mq.tongxinmao.com:18831"
-#define MQTT_URI                "tcp://192.168.12.83:1883"
+#define MQTT_URI                "tcp://test.mosquitto.org:1883"
 #define MQTT_SUBTOPIC           "/umqtt/test"
 #define MQTT_PUBTOPIC           "/umqtt/test"
 #define MQTT_WILLMSG            "Goodbye!"
