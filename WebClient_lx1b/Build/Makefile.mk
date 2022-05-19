@@ -85,7 +85,7 @@ all: $(OUT_ELF)
 $(OUT_ELF): $(STARTO) $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: SDE Lite C Linker'
-	D:/LoongIDE/mips-2011.03/bin/mips-sde-elf-gcc.exe -L"%path%/mips-2011.03/lib" -L"%path%/mips-2011.03/mips-sde-elf/lib"  -mips32 -G0 -EL -msoft-float -nostartfiles  -static -T $(LINKCMDS) -o $(OUT_ELF) -e start $(STARTO) $(OBJS) $(USER_OBJS) $(LIBS) 
+	D:/LoongIDE/mips-2011.03/bin/mips-sde-elf-gcc.exe -L"%path%/mips-2011.03/lib" -L"%path%/mips-2011.03/mips-sde-elf/lib"  -mips32 -G0 -EL -msoft-float -nostartfiles -static -T $(LINKCMDS) -o $(OUT_ELF) -e start $(STARTO) $(OBJS) $(USER_OBJS) $(LIBS) 
 	@echo 'Invoking: SDE Lite C Objcopy'
 	D:/LoongIDE/mips-2011.03/bin/mips-sde-elf-objcopy.exe -O binary $(OUT_ELF) $(OUT_BIN)
 	@echo 'Invoking: SDE Lite C Size'

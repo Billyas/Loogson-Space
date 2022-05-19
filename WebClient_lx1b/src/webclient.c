@@ -113,11 +113,12 @@ static int webclient_read_line(struct webclient_session *session, char *buffer, 
 
     RT_ASSERT(session);
     RT_ASSERT(buffer);
-
+    rt_kprintf("enter webclient_readline\n");
     /* Keep reading until we fill the buffer. */
     while (count < size)
     {
         rc = webclient_recv(session, (unsigned char *) &ch, 1, 0);
+        //rt_kprintf("rc =%d\n", rc);
 #if defined(WEBCLIENT_USING_MBED_TLS) || defined(WEBCLIENT_USING_SAL_TLS)
         if (session->is_tls && (rc == MBEDTLS_ERR_SSL_WANT_READ || rc == MBEDTLS_ERR_SSL_WANT_WRITE))
         {
@@ -138,6 +139,7 @@ static int webclient_read_line(struct webclient_session *session, char *buffer, 
     if (count > size)
     {
         LOG_E("read line failed. The line data length is out of buffer size(%d)!", count);
+        rt_kprintf("read line failed. The line data length is out of buffer size(%d)!", count);
         return -WEBCLIENT_ERROR;
     }
 
@@ -785,6 +787,7 @@ int webclient_handle_response(struct webclient_session *session)
 
         /* read a line from the header information. */
         rc = webclient_read_line(session, mime_buffer, session->header->size - session->header->length);
+        rt_kprintf("rc = %d\n", rc);
         if (rc < 0)
             break;
 

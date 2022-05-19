@@ -99,7 +99,7 @@ extern int install_3th_libraries(void);
 //#define BSP_USE_PWM2
 //#define BSP_USE_PWM3
 
-//#define BSP_USE_RTC
+#define BSP_USE_RTC
 
 //#define BSP_USE_AC97
 
